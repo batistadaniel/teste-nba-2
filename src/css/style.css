@@ -48,6 +48,14 @@ header {
 }
 
 /* MENU DO CABECALHO */
+.menu-desktop {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-around;    
+    padding: 2px;
+}
+
 .menu-desktop nav ul, .btn-site-nba {
     display: flex; 
     gap: 2rem; 
@@ -61,11 +69,6 @@ header {
 .menu-desktop nav ul li a {
     color: var(--color-text-primary); 
 }
-/* .menu-desktop ul li a:hover {
-    padding-bottom: .1rem; 
-    border-bottom: .1rem solid var(--color-text-primary); 
-    transition: .2s step-start;
-} */
 .menu-desktop .link-menu a:hover {
     background-color: var(--color-btn-nba);
     color: var(--color-black);
@@ -89,21 +92,9 @@ header {
     font-weight: 900;
 }
 
-/* .menu {
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-} */
-
 /* MENU MOBILE */
-.btn-abrir-menu {
-    display: flex;
-    color: var(--color-white);
-}
-
 .menu-mobile {
-    background-color: #000;
+    background-color: var(--color-black);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -116,12 +107,11 @@ header {
 .menu-mobile.abrir-menu {
     width: 75%;
 }
-.menu-mobile.abrir-menu .overlay-menu {
+ .menu-mobile.abrir-menu ~ .overlay-menu { /* ~ */
     display: block;
 }
 .menu-mobile nav ul li a {
-    display: flex;
-    flex-direction: column;
+    display: block;
     text-align: right;
     gap: 2rem; 
     font-size: 14px; 
@@ -151,7 +141,6 @@ header {
     opacity: 35%;
     display: none;
 }
-
 
 /* MAIN - h1 GERAL*/
 main h1 {
@@ -612,9 +601,14 @@ main section .banner-premios {
 /* RESPONSIVO */
 
 /* ESCONDE O MENU DESKTOP */
-@media screen and (max-width: 1125px) {
+@media screen and (max-width: 1895px) {
     .menu-desktop {
         display: none;
+    }
+    header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
@@ -809,7 +803,3 @@ main section .banner-premios {
         font-weight: 100;
     }
 }
-
-
-
-
