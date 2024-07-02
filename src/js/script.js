@@ -10,6 +10,7 @@ btnMenu.addEventListener('click', function() {
 // Fecha o menu ao clicar no botao
 menu.addEventListener('click', function() {
     menu.classList.remove('abrir-menu');
+    // overlay.style.display = 'none';
 });
 
 // Fecha o menu ao clicar fora
